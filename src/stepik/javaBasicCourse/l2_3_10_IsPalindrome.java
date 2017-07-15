@@ -26,6 +26,7 @@ package stepik.javaBasicCourse;
 public class l2_3_10_IsPalindrome {
     public static void main(String[] args) {
         System.out.println(isPalindrome("Madam, I'm Adam!"));
+        System.out.println(isPalindromeStream("Madam, I'm Adam!"));
     }
 
     /**
@@ -40,4 +41,19 @@ public class l2_3_10_IsPalindrome {
         return sb.append(newText).reverse().toString().equals(newText);
     }
 
+    /**
+     * Checks if given <code>text</code> is a palindrome.
+     * <p>Uses Stream and functional programming
+     *
+     * @param text any string
+     * @return <code>true</code> when <code>text</code> is a palindrome, <code>false</code> otherwise
+     */
+    public static boolean isPalindromeStream(String text) {
+        StringBuilder leftToRight = new StringBuilder();
+        text.chars().filter(Character::isLetterOrDigit)
+                .map(Character::toLowerCase)
+                .forEach(leftToRight::appendCodePoint);
+        StringBuilder rightToLeft = new StringBuilder(leftToRight).reverse();
+        return leftToRight.toString().equals(rightToLeft.toString());
+    }
 }

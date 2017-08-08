@@ -24,7 +24,7 @@ package stepik.javaBasicCourse;
  *
  * Sample Input 3:false false true true
  * Sample Output 3:true
- * }</pre></blockquote
+ * }</pre></blockquote>
  *
  * @author Sergei Ermenkov
  */

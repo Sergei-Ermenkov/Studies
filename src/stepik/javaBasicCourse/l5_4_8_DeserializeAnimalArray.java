@@ -38,7 +38,6 @@ import java.util.Objects;
  * @author Sergei Ermenkov
  */
 public class l5_4_8_DeserializeAnimalArray {
-    //TODO Изменить исключения
     public static void main(String[] args) throws IOException {
         byte[] data;
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -53,7 +52,6 @@ public class l5_4_8_DeserializeAnimalArray {
         Animal[] arrayAnimal = deserializeAnimalArray(data);
     }
 
-    //TODO Изменить исключения
     static Animal[] deserializeAnimalArray(byte[] data) {
         Animal[] animalArray;
         int elementNumber;
